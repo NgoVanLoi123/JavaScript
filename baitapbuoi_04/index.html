@@ -56,8 +56,10 @@
             const boxesDiv = document.querySelector('.boxes');
             const rederBox = function () {
                 let html = '';
-                colors.forEach(function (box) {
-                    html += `<div class="box">
+                colors.forEach(function (color) {
+                    html +=`<div class="box"
+                            style="background-color: ${color};"
+                                            >
                                  
                              </div>`;
                 })
@@ -65,14 +67,6 @@
             };
             rederBox();
                 let boxI = document.querySelectorAll('.box');
-            for (let i = 0; i < boxI.length; i++) {
-                for (let j = 0; j < colors.length; j++) {
-                    if (i == j) {
-                        boxI[i].style.backgroundColor = colors[j];
-                    }
-                }
-
-            }
             let total = document.querySelector('.points');
             let totalBox = function () {
                 let sum = 0;
